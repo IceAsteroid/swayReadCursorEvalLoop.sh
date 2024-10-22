@@ -73,4 +73,4 @@ bindsym --release   $mod+Control+e seat - cursor release BTN_RIGHT
 ## Debugging
 You can turn on echo messages to print in the terminal by uncommenting those `echo` lines in the script to see what happens.
 
-There's no need to add an option for that to decrease the performance of the script, since it's very simple to uncomment them, they're only a few lines.
+There's no need to add an option for that, which would decrease the performance of the script a bit, since it's very simple to uncomment them, they're only a few lines.
