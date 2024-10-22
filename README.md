@@ -14,6 +14,9 @@ An awesome script to move cursor around without mouse in Sway.
 
 * All of the above features are configurable mostly in the script, while little tweaking on the Sway conf.
 
+## Combine with other tools in Sway
+Mouse clicks & scrolls can be simulated by the built-in Sway features or with tools like `dotool` or `wtype` in Sway.
+
 ## Configuration
 In script:
 ```
@@ -34,7 +37,7 @@ resolutionY=1080
 xHalf=$((resolutionX / 2))
 yHalf=$((resolutionY / 2))
 
-# the name pipe’s path, used to receive inputs.
+# The name pipe’s path, used to receive inputs.
 pipeFilePath="/tmp/swayScriptsTmpDir"
 pipeFile="${pipeFilePath}/swayReadCursorEvalLoop.pipe"
 
@@ -68,4 +71,4 @@ bindsym --release   $mod+Control+e seat - cursor release BTN_RIGHT
 ## Debugging
 You can turn on echoed messages to print in the terminal by uncommenting those `echo` lines in the script to see what happens.
 
-I don't wanna add an option for that to decrease the performance of the script, since it's very simple to uncomment them, they're a few lines.
+There's no need to add an option for that to decrease the performance of the script, since it's very simple to uncomment them, they're only a few lines.
