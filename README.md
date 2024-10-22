@@ -45,7 +45,7 @@ pipeFile="${pipeFilePath}/swayReadCursorEvalLoop.pipe"
 
 In sway conf(as an example):
 ```
-# exec_always ~/_pathOfScript_swayReadCursorEval.sh # Replace this with actual path
+# exec_always ~/_pathOfScript_/swayReadCursorEval.sh # Replace this with actual path
 
 bindsym $mod+Control+h exec "echo 'move left' > /tmp/swayScriptsTmpDir/swayReadCursorEvalLoop.pipe"
 bindsym $mod+Control+l exec "echo 'move right' > /tmp/swayScriptsTmpDir/swayReadCursorEvalLoop.pipe"
