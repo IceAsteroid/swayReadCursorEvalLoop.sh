@@ -2,13 +2,13 @@
 An awesome script to move cursor around without mouse in Sway. 
 
 ## Features
-* The script is running constantly to receive inputs from a named pipe file. It then reads the input, eval to run cursor actions, and loop again for next input.
+* The script is running constantly to receive inputs from a named pipe file. It then reads the input, evals to run cursor actions, and loops again for next input.
 
-  - It works better by putting it in background & having bound as keybindings in Sway.
+  - It works better by putting it in background & having its actions bound as keybindings in Sway.
 
 * The most exciting feature is the incremental speed of cursor movements. Curor moves faster when an action is pressed on, and the speed is reset after the action is released off.
 
-  - For example, the *cursor left* action is bound to `$mod+Control+h`, pressing the key to keep moving cursor left increases the speed, even if you just release the `h` key, the speed is still reset. So you can subtly move cursor wildly or mildly :)
+  - For example, the *cursor left* action is bound to `$mod+Control+h`, pressing the key to keep moving cursor to the left, increases the speed. Even if you just release the `h` key while "$mod+Control" is still pressed, the speed is reset. So you can subtly move cursor wildly or mildly :)
 
 * An action to "reset" cursor at the center of the screen, it needs to specify screen resolution in the script to make it work correctly.
 
@@ -69,6 +69,6 @@ bindsym --release   $mod+Control+e seat - cursor release BTN_RIGHT
 ```
 
 ## Debugging
-You can turn on echoed messages to print in the terminal by uncommenting those `echo` lines in the script to see what happens.
+You can turn on echo messages to print in the terminal by uncommenting those `echo` lines in the script to see what happens.
 
 There's no need to add an option for that to decrease the performance of the script, since it's very simple to uncomment them, they're only a few lines.
