@@ -42,6 +42,7 @@ EOF
 [[ "${1}" == "-h" || "${1}" == "--help" ]] && { printUsage_; exit 1; }
 
 # Create the named pipe if not existent.
+[ -d ${pipeFilePath} ] || { mkdir ${pipeFilePath}; chmod 744 ${pipeFilePath}; }
 [ -p ${pipeFile} ] || { mkfifo ${pipeFile}; chmod 744 ${pipeFile}; }
 
 while read -r line < ${pipeFile}; do
