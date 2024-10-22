@@ -10,12 +10,30 @@ An awesome script to move cursor around without mouse in Sway.
 
   - For example, the *cursor left* action is bound to `$mod+Control+h`, pressing the key to keep moving cursor to the left, increases the speed. Even if you just release the `h` key while "$mod+Control" is still pressed, the speed is reset. So you can subtly move cursor wildly or mildly :)
 
-* An action to "reset" cursor at the center of the screen, it needs to specify screen resolution in the script to make it work correctly.
+* An action to "reset" cursor to be at the center of the screen, it needs to specify screen resolution in the script to make it work correctly.
 
 * All of the above features are configurable mostly in the script, while little tweaking on the Sway conf.
 
 ## Combine with other tools in Sway
 Mouse clicks & scrolls can be simulated by the built-in Sway features or with tools like `dotool` or `wtype` in Sway.
+
+## Print the help text
+`$: swayReadCursorEval.sh -h` or with `--help` argument.
+
+```
+Usage:
+  swayReadCursorEval.sh [OPTION]
+  -h Print this usage note
+  # Redirect one of following actions to the named pipe,
+  # "/tmp/swayScriptsTmpDir/swayReadCursorEvalLoop.pipe"
+Actions:
+  'move left'
+  'move right'
+  'move up'
+  'move down'
+  'set center'
+  'reset speed'
+```
 
 ## Configuration
 In script:
