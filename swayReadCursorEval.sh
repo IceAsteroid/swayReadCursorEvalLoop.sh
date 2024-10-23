@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ### Configure cursor movement parameters ###
-# Initial cursor speed when an action stars.
+# Initial cursor speed when an action starts.
 cursorSpeed=4
 # Increment cursor speed while an action continues.
 cursorSpeedIncrement=4
@@ -41,7 +41,7 @@ EOF
 
 [[ "${1}" == "-h" || "${1}" == "--help" ]] && { printUsage_; exit 1; }
 
-# Create the named pipe if not existent.
+# Create the named pipe & parent dir if not existent.
 [ -d ${pipeFilePath} ] || { mkdir ${pipeFilePath}; chmod 744 ${pipeFilePath}; }
 [ -p ${pipeFile} ] || { mkfifo ${pipeFile}; chmod 744 ${pipeFile}; }
 

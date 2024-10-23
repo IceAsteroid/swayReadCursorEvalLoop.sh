@@ -39,7 +39,7 @@ Actions:
 In script:
 ```
 ### Configure cursor movement parameters ###
-# Initial cursor speed when an action stars.
+# Initial cursor speed when an action starts.
 cursorSpeed=4
 # Increment cursor speed while an action continues.
 cursorSpeedIncrement=4
@@ -63,7 +63,7 @@ pipeFile="${pipeFilePath}/swayReadCursorEvalLoop.pipe"
 
 In sway conf(as an example):
 ```
-# exec_always ~/_pathOfScript_/swayReadCursorEval.sh # Replace this with actual path
+# exec ~/_pathOfScript_/swayReadCursorEval.sh # Replace this with actual path
 
 bindsym $mod+Control+h exec "echo 'move left' > /tmp/swayScriptsTmpDir/swayReadCursorEvalLoop.pipe"
 bindsym $mod+Control+l exec "echo 'move right' > /tmp/swayScriptsTmpDir/swayReadCursorEvalLoop.pipe"
@@ -92,3 +92,8 @@ bindsym --release   $mod+Control+e seat - cursor release BTN_RIGHT
 You can turn on echo messages to print in the terminal by uncommenting those `echo` lines in the script to see what happens.
 
 There's no need to add an option for that, which would decrease the performance of the script a bit, since it's very simple to uncomment them, they're only a few lines.
+
+## Contribution
+If you have anything to discuss, just open an issue, don't blindly push a PR, it won't be accepted unless it's discussed first.
+
+Since it's a small script mostly for personal use, if no essential or very useful features are required, you can feel free to just folk and modify it:)
