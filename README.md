@@ -22,10 +22,25 @@ Mouse clicks & scrolls can be simulated by the built-in Sway features or with to
 
 ```
 Usage:
-  swayReadCursorEval.sh [OPTION]
-  -h Print this usage note
-  # Redirect one of following actions to the named pipe,
-  # "/tmp/swayScriptsTmpDir/swayReadCursorEvalLoop.pipe"
+  swayReadCursorEval_2.sh [OPTIONS] # All options are mandatory.
+Options:
+  -s Assigned to variable $cursorSpeedX
+     Initial cursor speed when an action stars.
+  -i Assigned to variable $cursorSpeedIncrementX
+     Increment cursor speed while an action continues.
+  -m Assigned to variable $cursorSpeedMaxX
+     Stop speed increments at maximum cursor speed.
+  -S Assigned to variable $cursorSpeedY
+     Initial cursor speed when an action stars.
+  -I Assigned to variable $cursorSpeedIncrementY
+     Increment cursor speed while an action continues.
+  -M Assigned to variable $cursorSpeedMaxY
+     Stop speed increments at maximum cursor speed.
+  -e Assigned to variable $PipeFileSuffix
+  -h Print this usage note.
+Note:
+  To use the script, redirect one of following Actions
+  ,to the named pipe: "${PipeFile}" in the script.
 Actions:
   'move left'
   'move right'
